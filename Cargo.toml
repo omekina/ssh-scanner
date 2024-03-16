@@ -1,0 +1,11 @@
+[package]
+name = "ssh-scanner"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+strip = true
+
+[dependencies]
+regex = "1.10.3"
+tokio = { version = "1.36.0", features = ["full"] }
