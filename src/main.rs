@@ -5,11 +5,11 @@ use regex::Regex;
 use tokio::sync::Semaphore;
 
 
-const ASYNC_PROCESSES: usize = 1024;
+const ASYNC_PROCESSES: usize = 512;
 /**
 * In milliseconds
 */
-const TIMEOUT_AFTER: u64 = 1000;
+const TIMEOUT_AFTER: u64 = 1024;
 
 
 #[tokio::main]
