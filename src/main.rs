@@ -44,7 +44,7 @@ async fn main() {
             let current_ip: String = ip::build(ip_binary);
             match tokio::time::timeout(Duration::from_millis(TIMEOUT_AFTER), ssh::get_banner(&current_ip)).await {
                 Ok(Some(banner)) => {
-                    println!("{} -> {}", current_ip, banner);
+                    println!("{} -> {:?}", current_ip, banner);
                     *current_total.lock().unwrap().borrow_mut() += 1;
                 },
                 _ => {},
